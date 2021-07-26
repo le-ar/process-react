@@ -68,7 +68,11 @@ export default function Shops(props: { shops: Shop[] }) {
   };
 
   const Save = () => {
-    setJson(JSON.stringify(shops, undefined, 4).replaceAll("\n", "<br>").replaceAll(" ", "&nbsp;"));
+    setJson(
+      JSON.stringify(shops, undefined, 4)
+        .replaceAll("\n", "<br>")
+        .replaceAll(" ", "&nbsp;")
+    );
   };
 
   return (
@@ -91,11 +95,15 @@ export default function Shops(props: { shops: Shop[] }) {
         </div>
       </div>
       <div>
-        <button
-          onClick={Save}
-          style={{ boxSizing: "border-box", width: "100%" }}
-        >
+        <button onClick={Save} style={{ boxSizing: "border-box" }}>
           Save
+        </button>
+        <button
+          onClick={() => {
+            setJson("");
+          }}
+        >
+          X
         </button>
         <div dangerouslySetInnerHTML={{ __html: json }}>{}</div>
       </div>
