@@ -1,0 +1,35 @@
+.week-day-shop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .week-day-shop__hours {
+    flex-shrink: 0;
+    flex-grow: 0;
+    color: gray;
+
+    & > input {
+      width: 40px;
+      text-align: center;
+      padding: 0;
+    }
+
+    & > * {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  }
+
+  .week-day-shop__label {
+    display: flex;
+    max-width: 45%;
+
+    .week-day-shop__name {
+      flex-grow: 1;
+      flex-shrink: 1;
+      overflow-wrap: break-word;
+      overflow: hidden;
+    }
+  }
+}

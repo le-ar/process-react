@@ -1,0 +1,29 @@
+.switch {
+  width: 50px;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #cbcbcb;
+  position: relative;
+  cursor: pointer;
+
+  .switch__pin {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    background-color: white;
+    transition: left 250ms;
+  }
+
+  &.on {
+    background-color: #95dc95;
+
+    .switch__pin {
+      left: 26px;
+    }
+  }
+}
